@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   speedBullet: 5
+  timeDestroy: 1.5
 --- !u!95 &2660527903296065695
 Animator:
   serializedVersion: 7

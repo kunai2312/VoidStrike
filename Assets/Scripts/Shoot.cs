@@ -6,6 +6,7 @@ public class Shoot : MonoBehaviour
     public GameObject[] weapon;
     public GameObject[] bullet;
     public Transform spawnBullet;
+
     public float fireRate = 0.5f;
     public enum WeaponModel
     {
@@ -37,8 +38,19 @@ public class Shoot : MonoBehaviour
     }
     void shoot()
     {
+        if (thisWeaponModel == WeaponModel.Rocket)
+        {
+            Instantiate(bullet[0], spawnBullet.position, Quaternion.identity);
+        }
+        if (thisWeaponModel == WeaponModel.Cannon)
+        {
+            Instantiate(bullet[1], spawnBullet.position, Quaternion.identity);
+        }
+        if (thisWeaponModel == WeaponModel.Laze)
+        {
+            Instantiate(bullet[2], spawnBullet.position, Quaternion.identity);
+        }
 
-        Instantiate(bullet[0], spawnBullet.position, Quaternion.identity);
     }
 
 
